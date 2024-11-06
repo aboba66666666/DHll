@@ -1,0 +1,13 @@
+$(document).ready(function(){
+	$('.item_title').click(function(event){
+		if($('.slaider_item').hasClass('one')){
+			$('.item_title').not($(this)).removeClass('active');
+			$('.item_body-slaider').not($(this).next()).slideUp(300);
+		}
+		$(this).toggleClass('active').next().slideToggle(300);
+	})
+})
+ $('.item_filter').click(function(event){
+    $('.item_filter').removeClass('active');
+    $(this).addClass('active');
+});
